@@ -35,5 +35,10 @@ public class FruitService {
 
     public FruitDto getFruitWithCharacterName(String detenteur) {
     return fruitMapper.toDTO(fruitRepository.findByDetenteur(detenteur)); 
-}
+    }
+
+    public FruitDto getFruitWithFrName(String nomFrancais) {
+        System.out.println(nomFrancais);
+    return fruitMapper.toDTO(fruitRepository.findByNomFrancais(nomFrancais)); 
+    }
 }
