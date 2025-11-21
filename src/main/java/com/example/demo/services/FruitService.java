@@ -31,5 +31,9 @@ public class FruitService {
     public FruitDto getRandomFruit() {
     Fruit randomFruit = fruitRepository.getRandomFruit();
     return fruitMapper.toDTO(randomFruit);
+    }
+
+    public FruitDto getFruitWithCharacterName(String detenteur) {
+    return fruitMapper.toDTO(fruitRepository.findByDetenteur(detenteur)); 
 }
 }

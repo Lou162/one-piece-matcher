@@ -24,7 +24,7 @@ public class Fruit {
     private String detenteur;
     @Field("Effet")
     private String effet;
-    @Field("Première apparition")
-    private String premiereApparition;
+    @Field("Types")
+    private String Type;
 
 }

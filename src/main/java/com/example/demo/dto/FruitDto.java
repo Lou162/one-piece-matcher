@@ -13,5 +13,6 @@ public class FruitDto {
     private String nomFrancais;
     private String detenteur;
     private String effet;
+    private String type;
 
 }

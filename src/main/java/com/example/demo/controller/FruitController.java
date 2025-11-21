@@ -3,8 +3,11 @@ package com.example.demo.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dto.DetenteurRequest;
 import com.example.demo.dto.FruitDto;
 import com.example.demo.services.FruitService;
 
@@ -24,5 +27,10 @@ public class FruitController {
     @GetMapping("/fruits/random")
     public FruitDto getRandomFruit() {
         return fruitService.getRandomFruit();
+    }
+
+    @PostMapping("/detenteur")
+    public FruitDto getFruitByDetenteur(@RequestBody DetenteurRequest request) {
+        return fruitService.getFruitWithCharacterName(request.getDetenteur());
     }
 }

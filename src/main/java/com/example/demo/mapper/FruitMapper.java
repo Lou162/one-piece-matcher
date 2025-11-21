@@ -15,7 +15,8 @@ public class FruitMapper {
                 fruit.getNomJaponais(),
                 fruit.getNomFrancais(),
                 fruit.getDetenteur(),
-                fruit.getEffet()
+                fruit.getEffet(),
+                fruit.getType()
         );
     }
 
@@ -27,7 +28,8 @@ public class FruitMapper {
                 dto.getNomJaponais(),
                 dto.getNomFrancais(),
                 dto.getDetenteur(),
-                dto.getEffet(), null
+                dto.getEffet(),
+                dto.getType()
         );
     }
 
